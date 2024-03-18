@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exam Registration</h1>
+        <form name="examRegistrationForm" onsubmit="return validateExamRegistrationForm()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function validateExamRegistrationForm() {
+            var name = document.forms["examRegistrationForm"]["name"].value;
+            var email = document.forms["examRegistrationForm"]["email"].value;
+            if (name && email) {
+                alert("Registration successful");
+                window.location.href = "exam_details.html"; // Redirect to exam_details.html
+                return false;
+            } else {
+                alert("Please fill in all fields");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
