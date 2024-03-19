@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Register for an Account</h1>
-    <form name="registerForm" onsubmit="return validateRegisterForm()" method="post">
+    <form name="registerForm" action="register_process.php" method="POST" onsubmit="return validateRegisterForm()" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
         <label for="password">Password:</label>
