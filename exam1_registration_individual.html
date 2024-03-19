@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam1 Registration - Individual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exam1 Registration - Individual</h1>
+       
+        <form name="examRegistrationForm" action="success.html" onsubmit="return validateExamRegistrationForm()" method="post">
+            <input type="hidden" id="examId" name="examId">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" id="rollNumber" name="rollNumber" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const examNumber = urlParams.get('exam');
+        document.getElementById("examNumber").innerText = examNumber;
+        document.getElementById("examId").value = examNumber;
+    </script>
+</body>
+</html>
